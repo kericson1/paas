@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'DatingHistoria-Bold';
+    src: url('/fonts/DatingHistoria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+body{
+    margin: 0;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+}
+
+.top{
+    background-image: url('/images/bg_login_admin.png');
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .logo img {
+    height: 50px;
+    padding-right: 5px;
+  }
+
+  .account {
+    display: flex; // on met flex
+    flex-direction: column;
+    padding-left: 5px;
+    align-items: center;
+    color: #000000;
+    font-size: 18px;
+    font-family: "DatingHistoria", sans-serif;
+  }
+
+  .account img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .account_user{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    position: relative;
+    background-color: black;
+    width: 60%;
+    padding: 10px;
+  }
+
+  .navbar span.menu-button {
+    display: block;
+    text-align: center;
+    padding:  10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .header.active .navbar ul {
+    display: block;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column; /* affiche la liste verticalement */
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin-right: 0;
+      margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+    }
+  }
+
+
+
+  /* Hide the login_admin element by default */
+.login_admin {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: 261px;
+    margin-right: 20px;
+    margin-bottom: 120px;
+
+    .formulaire_admin{
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+    }
+
+    .card_form_employe{
+        display: block;
+        border-radius: 10px; /* bord arrondi */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* effet d'ombre */
+        background-color: #f8f9fa; /* couleur de fond */
+        padding: 20px; /* espacement intérieur */
+        height: 332px;
+    }
+    .bon_retour{
+        background-color:#E61D1D ;
+        padding: 20px;
+        h1{
+            color: #fff;
+        }
+    }
+
+
+  }
+
+  /* Show the login_admin element when it has the "visible" class */
+  .login_admin.visible {
+    display: flex;
+  }
+
+
+  /* Hide the home element when it has the "visible" class */
+
+  #acceuil-link-retour{
+    margin-bottom: 20px;
+    a{
+        color: #000;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "DatingHistoria", sans-serif;
+    }
+  }
+
+
+

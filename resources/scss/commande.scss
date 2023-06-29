@@ -1,0 +1,534 @@
+@font-face {
+    font-family: 'DatingHistoria-Bold';
+    src: url('/fonts/DatingHistoria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+body{
+    margin: 0;
+}
+main{
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.top{
+    background-image: url('/images/prise_commande.jpg');
+    background-size: cover;
+    // background-position: center center;
+    height: 450px;
+    width: 100%;
+    overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+
+}
+.top_recap{
+    background-image: url('/images/prise_commande.jpg');
+    background-size: cover;
+    // background-position: center center;
+    height: 450px;
+    width: 100%;
+    overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+.header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .retour img {
+    height: 50px;
+    padding-right: 5px;
+  }
+
+
+
+  .account img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .account_user{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+    font-size: 18px;
+    font-family: "DatingHistoria", sans-serif;
+
+    .dropdown{
+
+        display: none;
+        li{
+            list-style: none;
+            padding: 5px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 25px;
+            cursor: pointer;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+            a{
+                text-decoration: none;
+                color: #E61D1D;
+            }
+        }
+    }
+
+  }
+
+  .navbar {
+    position: relative;
+    background-color: black;
+    width: 60%;
+    padding: 10px;
+  }
+
+  .navbar span.menu-button {
+    display: block;
+    text-align: center;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:30px;
+    padding:  10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:25px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .header.active .navbar ul {
+    display: block;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column; /* affiche la liste verticalement */
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin-right: 0;
+      margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+    }
+  }
+  .main_content {
+    display: block;
+    justify-content: center;
+    padding-top: 265px;
+    padding-left: 88px;
+    width: 430px;
+    .main_buttons{
+        width: 350px;
+        text-align: center;
+        margin-top: 305px;
+        margin-bottom: 50px;
+        h1{
+            font-size: 35px;
+            background-color: #E6CB1D;
+            color: #000;
+            font-family: "DatingHistoria", sans-serif;
+        }
+    }
+  }
+.numero_table_group{
+    margin-top: 30px;
+    .numero_table{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .pair {
+            background-color: #E6CB1D;
+            color: white;
+          }
+          .impair {
+            background-color: #E61D1D;
+            color: white;
+          }
+          button {
+            width: 120px;
+            height: 100px;
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          button:hover {
+            background-color: #333;
+            color: white;
+          }
+    }
+}
+.numero_table_commande{
+    padding: 1px 60px 1px 60px;
+    h1{
+        text-transform: uppercase;
+        background-color: #E61D1D;
+        padding: 2px;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+        font-family: "DatingHistoria", sans-serif;
+    }
+}
+.menu{
+    display: none;
+        /* Réinitialiser les styles du navigateur */
+        .menu, ul, li {
+            margin: 10px;
+            padding: 0;
+        }
+
+            /* Style des onglets */
+        .tabs {
+        display: flex;
+        list-style-type: none;
+        }
+
+        .tabs li {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        background-color: #1de6c5;
+        font-size: 26px;
+        color: #fff;
+        cursor: pointer;
+        }
+
+        .tabs li:hover {
+        background-color: #1b927e;
+        }
+
+        .tabs li.active {
+        background-color: #1b927e;
+        color: #000;
+        }
+
+        /* Style du contenu des onglets */
+        .tab-content {
+        display: none;
+        padding: 20px;
+        background-color: #f9f9f9;
+        }
+
+        .tab-content.active {
+        display: block;
+        }
+        /* Réinitialiser les styles du navigateur */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style du formulaire */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .input-container i {
+            margin-right: 10px;
+            color: #999;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid #999;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom-color: #333;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #E61D1D;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #E6CB1D;
+        }
+
+        button:disabled {
+            background-color: #999;
+            cursor: not-allowed;
+        }
+
+        /* Style des icônes */
+        .fa {
+            font-size: 18px;
+        }
+    .mee{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: none; //flex
+        justify-content: space-evenly;
+        .nourriture{
+            margin: 10px 10px 10px 0;
+            .header_nourriture{
+                background-image: url('/images/nourriture.jpg');
+                background-size: cover;
+                background-position: center center;
+                padding: 1px 50px 1px 50px;
+                    h1{
+                        text-transform: uppercase;
+                        background-color: #E61D1D;
+                        padding: 2px;
+                        color: #fff;
+                        font-size: 40px;
+                        font-family: "DatingHistoria", sans-serif;
+                        text-align: center;
+                    }
+                }
+        }
+
+        .raffraisse{
+            margin: 10px 10px 10px 0;
+            .header_raffraisse{
+                background-image: url('/images/raffraisse.jpg');
+                background-size: cover;
+                background-position: center center;
+                padding: 1px 50px 1px 50px;
+                h1{
+                    text-transform: uppercase;
+                    background-color:#E6CB1D ;
+                    padding: 2px;
+                    color: #000;
+                    font-size: 40px;
+                    font-family: "DatingHistoria", sans-serif;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}
+
+
+.choix_nourriture{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #E61D1D;
+            color: white;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .food-name {
+            margin-left: 10px;
+        }
+
+        .fa-check-circle {
+            color: green;
+            cursor: pointer;
+        }
+
+        .fa-check-circle:hover {
+            opacity: 0.8;
+        }
+
+        .checked {
+            color: #E61D1D;
+        }
+}
+.choix_raffraisse{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #E6CB1D;
+            color: #000;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .food-name {
+            margin-left: 10px;
+        }
+
+        .fa-check-circle {
+            color: green;
+            cursor: pointer;
+        }
+
+        .fa-check-circle:hover {
+            opacity: 0.8;
+        }
+
+        .checked {
+            color: #E6CB1D;
+        }
+}
+
+.btn_nouvel_valder{
+    display: none;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:10px;
+    margin-bottom: 30px;
+
+    .btn_nouvel_valider{
+        text-transform: uppercase;
+        background-color: rgb(14, 74, 239);
+        color: white;
+        font-size:24px;
+        font-weight: bold;
+        border: none; /* enlever la bordure */
+        padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+        text-align: center; /* centrer le texte */
+        text-decoration: none; /* enlever le soulignement */
+        display: inline-block; /* afficher en tant que bloc inline */
+        margin: 4px 2px; /* marges */
+        cursor: pointer; /* changer le curseur */
+        border-radius: 10px; /* arrondir les coins */
+    }
+}
+.btn_valder{
+    display: none;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:10px;
+    margin-bottom: 30px;
+
+    .btn_valider{
+        text-transform: uppercase;
+        background-color: black;
+        color: white;
+        font-size:24px;
+        font-weight: bold;
+        border: none; /* enlever la bordure */
+        padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+        text-align: center; /* centrer le texte */
+        text-decoration: none; /* enlever le soulignement */
+        display: inline-block; /* afficher en tant que bloc inline */
+        margin: 4px 2px; /* marges */
+        cursor: pointer; /* changer le curseur */
+        border-radius: 10px; /* arrondir les coins */
+    }
+}
+.block_valide{
+    display: none;
+    text-align: center;
+    .btn_commande{
+        button{
+            font-weight: bold;
+            border: none; /* enlever la bordure */
+            padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+            text-align: center; /* centrer le texte */
+            text-decoration: none; /* enlever le soulignement */
+            display: inline-block; /* afficher en tant que bloc inline */
+            font-size: 20px; /* taille de police */
+            margin: 4px 2px; /* marges */
+            cursor: pointer; /* changer le curseur */
+            border-radius: 10px; /* arrondir les coins */
+        }
+    }
+    .retour_bouton{
+        background-color: #E6CB1D;
+        color: black; /* couleur de texte */
+
+    }
+    .retour_commande{
+        background-color: #E61D1D;
+        color: white; /* couleur de texte */
+    }
+}
+
+

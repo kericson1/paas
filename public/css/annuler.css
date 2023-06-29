@@ -1,0 +1,267 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "DatingHistoria-Bold";
+  src: url("/fonts/DatingHistoria-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.top {
+  background-image: url("/images/annulation_commande.jpg");
+  background-size: cover;
+  height: 867px;
+  width: 100%;
+  overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.retour img {
+  height: 50px;
+  padding-right: 5px;
+}
+
+.account img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.account_user {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 18px;
+  font-family: "DatingHistoria", sans-serif;
+}
+.account_user .dropdown {
+  display: none;
+}
+.account_user .dropdown li {
+  list-style: none;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.account_user .dropdown li:hover {
+  background-color: #000;
+  color: #fff;
+}
+.account_user .dropdown li a {
+  text-decoration: none;
+  color: #E61D1D;
+}
+
+.navbar {
+  position: relative;
+  background-color: black;
+  width: 60%;
+  padding: 10px;
+}
+
+.navbar span.menu-button {
+  display: block;
+  text-align: center;
+  font-family: "DatingHistoria-Bold", sans-serif;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 10px;
+  font-family: "DatingHistoria-Bold", sans-serif;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+.header.active .navbar ul {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column; /* affiche la liste verticalement */
+    align-items: center;
+  }
+  .navbar ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+  }
+}
+.main_content {
+  display: block;
+  justify-content: center;
+  padding-top: 265px;
+  padding-left: 88px;
+  width: 430px;
+}
+.main_content .main_buttons {
+  width: 350px;
+  text-align: center;
+  margin-top: 305px;
+  margin-bottom: 50px;
+}
+.main_content .main_buttons h1 {
+  font-size: 35px;
+  background-color: #E6CB1D;
+  color: #000;
+  font-family: "DatingHistoria", sans-serif;
+}
+
+.numero_table_group {
+  margin-top: 30px;
+}
+.numero_table_group .numero_table {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.numero_table_group .numero_table .pair {
+  background-color: #E6CB1D;
+  color: white;
+}
+.numero_table_group .numero_table .impair {
+  background-color: #E61D1D;
+  color: white;
+}
+.numero_table_group .numero_table button {
+  width: 120px;
+  height: 100px;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.numero_table_group .numero_table button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.numero_table_commande {
+  padding: 1px 60px 1px 60px;
+}
+.numero_table_commande h1 {
+  text-transform: uppercase;
+  background-color: #E6CB1D;
+  padding: 2px;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-family: "DatingHistoria", sans-serif;
+}
+
+.btn_nouvel_valder {
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.btn_nouvel_valder .btn_nouvel_valider {
+  text-transform: uppercase;
+  background-color: rgb(14, 74, 239);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+
+.btn_annule {
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.btn_annule .btn_annuler {
+  text-transform: uppercase;
+  background-color: #E61D1D;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+
+.block_valide {
+  display: none;
+  text-align: center;
+}
+.block_valide .btn_commande button {
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  font-size: 20px; /* taille de police */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+.block_valide .retour_bouton {
+  background-color: #E61D1D;
+  color: #fff; /* couleur de texte */
+}
+.block_valide .retour_commande {
+  background-color: #E61D1D;
+  color: white; /* couleur de texte */
+}

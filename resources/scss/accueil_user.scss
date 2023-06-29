@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'DatingHistoria-Bold';
+    src: url('/fonts/DatingHistoria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+body{
+    margin: 0;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+}
+main{
+    margin: 0;
+}
+
+.top{
+    background-image: url('/images/accueil_clients.jpg');
+    background-size: cover;
+    // background-position: center center;
+    height: 867px;
+    width: 100%;
+    overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+.header {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .retour {
+    height: 50px;
+    padding-right: 5px;
+  }
+
+
+
+  .account img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .account_user{
+    display: flex !important;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+    font-size: 18px;
+    font-family: "DatingHistoria", sans-serif;
+
+    .dropdown{
+
+        display: none;
+        li{
+            list-style: none;
+            padding: 5px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 25px;
+            cursor: pointer;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+            a{
+                text-decoration: none;
+                color: #E61D1D;
+            }
+        }
+    }
+
+  }
+
+  .navbar {
+    position: relative;
+    background-color: white;
+    width: 60%;
+    padding: 10px;
+  }
+
+  .navbar span.menu-button {
+    display: block;
+    text-align: center;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:30px;
+    padding:  10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:25px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .header.active .navbar ul {
+    display: block;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column; /* affiche la liste verticalement */
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin-right: 0;
+      margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+    }
+  }
+  .main_content {
+    margin-left: 10px;
+    margin-top: 655px;
+    display: block;
+    justify-content: center;
+
+
+    .main_buttons{
+        width: 350px;
+        text-align: center;
+
+        margin-bottom: 50px;
+        h1{
+            font-size: 35px;
+            background-color: #E6CB1D;
+            color: #000;
+            font-family: "DatingHistoria", sans-serif;
+        }
+    }
+  }
+
+/**** contenue */
+.formul_accueil_client{
+    .contenue{
+        /* CSS */
+        display: flex;
+        justify-content: center;
+
+    .dropdown-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 88%;
+        // margin: 30px;
+      }
+      .btn_jaune {
+        background-color:#E6CB1D;
+        padding: 10px;
+        color: #000;
+      }
+      .btn_rouge {
+        background-color:#E61D1D;
+        padding: 10px;
+        color: #fff;
+      }
+
+      .dropdown-item {
+        position: relative;
+      }
+
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        // color: #0b0b0b;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .dropdown-btn i {
+        margin-right: 10px;
+      }
+
+      .dropdown-content {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        min-width: 150px;
+        padding: 10px;
+        background-color: #eadddd;
+        color: #000;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+
+      .dropdown-content label {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .input_group input[type="text"],
+.input_group input[type="number"] {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input_group input[type="text"]:focus,
+.input_group input[type="number"]:focus {
+  outline: none;
+  border-color: #6eb1ff;
+  box-shadow: 0 0 5px rgba(110,177,255,0.5);
+}
+
+.input_group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-group input[type="number"] {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #6eb1ff;
+    box-shadow: 0 0 5px rgba(110, 177, 255, 0.5);
+  }
+  .input-group input[type="time"] {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    box-shadow: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .input-group input[type="time"]:focus {
+    outline: none;
+    border-color: #0077ff;
+  }
+
+  .input-group-addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 8px;
+    background-color: #6eb1ff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+  }
+  .input_group select {
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23333'%3E%3Cpath d='M4 12l12 12 12-12z'/%3E%3C/svg%3E");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    cursor: pointer;
+  }
+
+  .input_group select:focus {
+    outline: none;
+    border-color: #6eb1ff;
+    box-shadow: 0 0 5px rgba(110, 177, 255, 0.5);
+  }
+
+  .ouvrir{
+    display: block;
+  }
+  .fermer{
+    display: none;
+  }
+
+    /* Afficher la dropdown-content lorsqu'on clique sur la dropdown-btn */
+    .dropdown-item:hover .dropdown-content {
+        display: block;
+
+      }
+
+      /* Masquer la dropdown-content lorsqu'on clique à l'extérieur de celle-ci */
+      .dropdown-container:not(:hover) .dropdown-content {
+        display: none;
+      }
+
+
+
+      /* Style pour les icônes */
+      .fa {
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+    }
+    .btn_valide{
+        margin-top: 125px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 180px;
+        .btn_rouge{
+            text-decoration: none;
+            align-items: center;
+            background-color: #E61D1D;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: "DatingHistoria", sans-serif;
+            cursor: pointer;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+

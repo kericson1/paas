@@ -1,0 +1,493 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "DatingHistoria-Bold";
+  src: url("/fonts/DatingHistoria-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.top {
+  background-image: url("/images/prise_commande.jpg");
+  background-size: cover;
+  height: 612px;
+  width: 100%;
+  overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+
+.top_recap {
+  background-image: url("/images/prise_commande.jpg");
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.retour img {
+  height: 50px;
+  padding-right: 5px;
+}
+
+.account img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.account_user {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 18px;
+  font-family: "DatingHistoria", sans-serif;
+}
+.account_user .dropdown {
+  display: none;
+}
+.account_user .dropdown li {
+  list-style: none;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.account_user .dropdown li:hover {
+  background-color: #000;
+  color: #fff;
+}
+.account_user .dropdown li a {
+  text-decoration: none;
+  color: #E61D1D;
+}
+
+.navbar {
+  position: relative;
+  background-color: black;
+  width: 60%;
+  padding: 10px;
+}
+
+.navbar span.menu-button {
+  display: block;
+  text-align: center;
+  font-family: "DatingHistoria-Bold", sans-serif;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 10px;
+  font-family: "DatingHistoria-Bold", sans-serif;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+.header.active .navbar ul {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column; /* affiche la liste verticalement */
+    align-items: center;
+  }
+  .navbar ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+  }
+}
+.main_content {
+  display: block;
+  justify-content: center;
+  padding-top: 265px;
+  padding-left: 88px;
+  width: 430px;
+}
+.main_content .main_buttons {
+  width: 350px;
+  text-align: center;
+  margin-top: 305px;
+  margin-bottom: 50px;
+}
+.main_content .main_buttons h1 {
+  font-size: 35px;
+  background-color: #E6CB1D;
+  color: #000;
+  font-family: "DatingHistoria", sans-serif;
+}
+
+.numero_table_group {
+  margin-top: 30px;
+}
+.numero_table_group .numero_table {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.numero_table_group .numero_table .pair {
+  background-color: #E6CB1D;
+  color: white;
+}
+.numero_table_group .numero_table .impair {
+  background-color: #E61D1D;
+  color: white;
+}
+.numero_table_group .numero_table button {
+  width: 120px;
+  height: 100px;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.numero_table_group .numero_table button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.numero_table_commande {
+  padding: 1px 60px 1px 60px;
+}
+.numero_table_commande h1 {
+  text-transform: uppercase;
+  background-color: #E61D1D;
+  padding: 2px;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-family: "DatingHistoria", sans-serif;
+}
+
+.menu {
+  display: none;
+  /* Réinitialiser les styles du navigateur */
+  /* Style des onglets */
+  /* Style du contenu des onglets */
+  /* Réinitialiser les styles du navigateur */
+  /* Style du formulaire */
+  /* Style des icônes */
+}
+.menu .menu, .menu ul, .menu li {
+  margin: 10px;
+  padding: 0;
+}
+.menu .tabs {
+  display: flex;
+  list-style-type: none;
+}
+.menu .tabs li {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #1de6c5;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu .tabs li:hover {
+  background-color: #1b927e;
+}
+.menu .tabs li.active {
+  background-color: #1b927e;
+  color: #000;
+}
+.menu .tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.menu .tab-content.active {
+  display: block;
+}
+.menu * {
+  box-sizing: border-box;
+}
+.menu .form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+.menu h2 {
+  text-align: center;
+}
+.menu form {
+  display: flex;
+  flex-direction: column;
+}
+.menu label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.menu .input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.menu .input-container i {
+  margin-right: 10px;
+  color: #999;
+}
+.menu input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+.menu input:focus {
+  outline: none;
+  border-bottom-color: #333;
+}
+.menu button {
+  padding: 10px;
+  background-color: #E61D1D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.menu button:hover {
+  background-color: #E6CB1D;
+}
+.menu button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+.menu .fa {
+  font-size: 18px;
+}
+.menu .mee {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: none;
+  justify-content: space-evenly;
+}
+.menu .mee .nourriture {
+  margin: 10px 10px 10px 0;
+}
+.menu .mee .nourriture .header_nourriture {
+  background-image: url("/images/nourriture.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 1px 50px 1px 50px;
+}
+.menu .mee .nourriture .header_nourriture h1 {
+  text-transform: uppercase;
+  background-color: #E61D1D;
+  padding: 2px;
+  color: #fff;
+  font-size: 40px;
+  font-family: "DatingHistoria", sans-serif;
+  text-align: center;
+}
+.menu .mee .raffraisse {
+  margin: 10px 10px 10px 0;
+}
+.menu .mee .raffraisse .header_raffraisse {
+  background-image: url("/images/raffraisse.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 1px 50px 1px 50px;
+}
+.menu .mee .raffraisse .header_raffraisse h1 {
+  text-transform: uppercase;
+  background-color: #E6CB1D;
+  padding: 2px;
+  color: #000;
+  font-size: 40px;
+  font-family: "DatingHistoria", sans-serif;
+  text-align: center;
+}
+
+.choix_nourriture {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.choix_nourriture table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+}
+.choix_nourriture th,
+.choix_nourriture td {
+  text-align: left;
+  padding: 8px;
+  font-size: 16px;
+}
+.choix_nourriture th {
+  background-color: #E61D1D;
+  color: white;
+  text-align: center;
+}
+.choix_nourriture tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.choix_nourriture .food-name {
+  margin-left: 10px;
+}
+.choix_nourriture .fa-check-circle {
+  color: green;
+  cursor: pointer;
+}
+.choix_nourriture .fa-check-circle:hover {
+  opacity: 0.8;
+}
+.choix_nourriture .checked {
+  color: #E61D1D;
+}
+
+.choix_raffraisse {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.choix_raffraisse table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+}
+.choix_raffraisse th,
+.choix_raffraisse td {
+  text-align: left;
+  padding: 8px;
+  font-size: 16px;
+}
+.choix_raffraisse th {
+  background-color: #E6CB1D;
+  color: #000;
+  text-align: center;
+}
+.choix_raffraisse tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.choix_raffraisse .food-name {
+  margin-left: 10px;
+}
+.choix_raffraisse .fa-check-circle {
+  color: green;
+  cursor: pointer;
+}
+.choix_raffraisse .fa-check-circle:hover {
+  opacity: 0.8;
+}
+.choix_raffraisse .checked {
+  color: #E6CB1D;
+}
+
+.btn_nouvel_valder {
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.btn_nouvel_valder .btn_nouvel_valider {
+  text-transform: uppercase;
+  background-color: rgb(14, 74, 239);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+
+.btn_valder {
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.btn_valder .btn_valider {
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+
+.block_valide {
+  display: none;
+  text-align: center;
+}
+.block_valide .btn_commande button {
+  font-weight: bold;
+  border: none; /* enlever la bordure */
+  padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+  text-align: center; /* centrer le texte */
+  text-decoration: none; /* enlever le soulignement */
+  display: inline-block; /* afficher en tant que bloc inline */
+  font-size: 20px; /* taille de police */
+  margin: 4px 2px; /* marges */
+  cursor: pointer; /* changer le curseur */
+  border-radius: 10px; /* arrondir les coins */
+}
+.block_valide .retour_bouton {
+  background-color: #E6CB1D;
+  color: black; /* couleur de texte */
+}
+.block_valide .retour_commande {
+  background-color: #E61D1D;
+  color: white; /* couleur de texte */
+}

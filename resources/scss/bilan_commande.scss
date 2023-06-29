@@ -1,0 +1,948 @@
+@font-face {
+    font-family: 'DatingHistoria-Bold';
+    src: url('/fonts/DatingHistoria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+body{
+    margin: 0;
+}
+main{
+    margin: 0;
+}
+
+.top{
+    background-image: url('/images/bilan_des_commandes.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 867px;
+    width: 100%;
+    overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+.top_additon{
+    background-image: url('/images/bilan_des_commandes.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 100%;
+    overflow: hidden; /* cache le contenu qui dépasse le conteneur */
+}
+.header {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .retour img {
+    height: 50px;
+    padding-right: 5px;
+  }
+
+
+
+  .account img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .account_user{
+    display: none;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+    font-size: 18px;
+
+    .dropdown{
+
+        display: none;
+        li{
+            list-style: none;
+            padding: 5px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 25px;
+            cursor: pointer;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+            a{
+                text-decoration: none;
+                color: #E61D1D;
+            }
+        }
+    }
+
+  }
+
+  .navbar {
+    position: relative;
+    background-color: black;
+    width: 60%;
+    padding: 10px;
+  }
+
+  .navbar span.menu-button {
+    display: block;
+    text-align: center;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:30px;
+    padding:  10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    font-family: 'DatingHistoria-Bold', sans-serif;
+    font-size:25px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .header.active .navbar ul {
+    display: block;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column; /* affiche la liste verticalement */
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin-right: 0;
+      margin-bottom: 10px; /* ajoute une marge inférieure pour séparer les éléments */
+    }
+  }
+
+.numero_table_group{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    .numero_table{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .pair {
+            background-color: #E6CB1D;
+            color: white;
+          }
+          .impair {
+            background-color: #E61D1D;
+            color: white;
+          }
+          button {
+            width: 120px;
+            height: 100px;
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          button:hover {
+            background-color: #333;
+            color: white;
+          }
+    }
+}
+.guide_table_commande{
+    padding: 1px 60px 1px 60px;
+    h1{
+        padding: 2px;
+        color: #E61D1D;
+        font-size: 26px;
+        text-align: center;
+    }
+}
+.numero_table_commande{
+    padding: 1px 60px 1px 60px;
+    h1{
+        text-transform: uppercase;
+        padding: 2px;
+        color: #E6CB1D;
+        font-size: 26px;
+        text-align: center;
+    }
+}
+
+.btn_voire_addition{
+    display: none;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:10px;
+
+    .btn_voir_addition{
+        text-transform: uppercase;
+        background-color: #E6CB1D;
+        color: white;
+        font-size:24px;
+        font-weight: bold;
+        border: none; /* enlever la bordure */
+        padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+        text-align: center; /* centrer le texte */
+        text-decoration: none; /* enlever le soulignement */
+        display: inline-block; /* afficher en tant que bloc inline */
+        margin: 4px 2px; /* marges */
+        cursor: pointer; /* changer le curseur */
+        border-radius: 10px; /* arrondir les coins */
+    }
+    .btn_voir_addition_individuel{
+        text-transform: uppercase;
+        background-color: #E61D1D;
+        color: white;
+        font-size:24px;
+        font-weight: bold;
+        border: none; /* enlever la bordure */
+        padding: 12px 24px; /* ajouter un peu d'espace intérieur */
+        text-align: center; /* centrer le texte */
+        text-decoration: none; /* enlever le soulignement */
+        display: inline-block; /* afficher en tant que bloc inline */
+        margin: 4px 2px; /* marges */
+        cursor: pointer; /* changer le curseur */
+        border-radius: 10px; /* arrondir les coins */
+    }
+}
+.addition{
+    display: none;
+    margin-top: 10px;
+    .numero_table{
+        margin-bottom: 20px;
+        .contenue{
+            background-color: #000;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #fff;
+                text-align: center;
+                color: #fff;
+                font-size: 32px; /* Augmentation de la taille de police */
+                margin: 0; /* Suppression de la marge */
+            }
+        }
+    }
+    .btn_addition_goup{
+        margin-bottom: 20px;
+        .contenue{
+            background-color: #E61D1D;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #fff;
+                font-size: 24px; /* Augmentation de la taille de police */
+                margin: 2; /* Suppression de la marge */
+            }
+        }
+    }
+    .nombre_personne{
+        margin-bottom: 20px;
+        .contenue{
+            background-color: #E6CB1D;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #000;
+                font-size: 24px; /* Augmentation de la taille de police */
+                margin: 0; /* Suppression de la marge */
+            }
+        }
+    }
+    .contenue_facture{
+        /* Style des éléments du formulaire */
+            .form_group {
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                width: 100%;
+            }
+
+            button[type="submit"] {
+                padding: 10px;
+                background-color: #E61D1D;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                cursor: pointer;
+            }
+
+            /* Style du formulaire dans le modal */
+            .modal-content form {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .modal-content h2 {
+                text-align: center;
+            }
+
+            /* Style pour rendre le formulaire plus compact sur mobile */
+            @media screen and (max-width: 600px) {
+                .modal-content form {
+                width: 100%;
+                }
+
+                input {
+                width: calc(100% - 20px);
+                }
+            }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+
+            .header_t{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: #000;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .header_tM{
+                background-color: #E6CB1D;
+                color: #000;
+            }
+          }
+
+          th,
+          td {
+            padding: 10px;
+            text-align: center;
+          }
+
+          th {
+            color: #fff;
+            font-weight: bold;
+            font-size: 26px;
+          }
+
+          td:nth-child(1) {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            text-align: left;
+          }
+
+
+          th:nth-child(n+2):not(:last-child) {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+          }
+          td:nth-child(n+2):not(:last-child) {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+          }
+
+          td:last-child  {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+          }
+          th:last-child {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+          }
+          .recap{
+            margin-top: 87px;
+            tbody{
+                .highlight_total {
+                    font-weight: bold;
+                    background-color: #E61D1D;
+                    font-size: 30px;
+                    color: #fff;
+                    margin-left: 20%;
+                    margin-right: 20%;
+                    text-align: center;
+                  }
+              }
+          }
+
+
+          tfoot{
+            .highlight {
+                font-weight: bold;
+                background-color: #E61D1D;
+                font-size: 30px;
+                color: #fff;
+                margin-right: 60%;
+                text-align: center;
+              }
+              td{
+                border-bottom: none;
+              }
+          }
+
+          .total {
+            text-align: right;
+            font-size: 30px;
+            font-weight: bold;
+            color: #000;
+          }
+
+          .total td,
+          .total th {
+            border-top: 2px solid #000;
+          }
+
+          .total td:last-child {
+            color: #E61D1D;
+          }
+
+          .total td:nth-child(n+2):not(:last-child),
+          .total th:nth-child(n+2):not(:last-child) {
+              margin-top: 10px;
+            color: #E61D1D;
+          }
+          .mode_selection{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 81px;
+            margin-bottom: 20px;
+            .custom-select {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #212529;
+                vertical-align: middle;
+                width: 100%;
+                max-width: 280px;
+              }
+
+              .custom-select select {
+                position: relative;
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #fff;
+                background-color: #E61D1D;
+                border: 1px solid #ced4da;
+                border-radius: 5px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                cursor: pointer;
+              }
+
+              .custom-select select:focus {
+                outline: none;
+                border-color: #E61D1D;
+                box-shadow: 0 0 0 0.2rem #E61D1D;
+              }
+
+              .custom-select::before,
+              .custom-select::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                width: 0;
+                height: 0;
+                margin-top: -3px;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid #fff;
+              }
+
+              .custom-select::after {
+                margin-top: -9px;
+                border-top: 6px solid #fff;
+              }
+
+              .custom-select.open::before {
+                margin-top: -9px;
+                border-top: 6px solid #6c757d;
+              }
+
+              .custom-select.open::after {
+                margin-top: -3px;
+                border-top: 6px solid #495057;
+                transform: rotate(180deg);
+              }
+          }
+
+
+          .modal {
+            display: none; /* Par défaut, le modal est masqué */
+            position: fixed; /* La fenêtre modale reste en place même lorsque l'utilisateur fait défiler la page */
+            z-index: 1; /* Place la fenêtre modale au-dessus de tout le reste */
+            left: 0;
+            top: 0;
+            width: 100%; /* La largeur de la fenêtre modale doit remplir toute la largeur de l'écran */
+            height: 100%; /* La hauteur de la fenêtre modale doit remplir toute la hauteur de l'écran */
+            overflow: auto; /* Permet aux utilisateurs de faire défiler la fenêtre modale si son contenu dépasse la hauteur de l'écran */
+            background-color: rgba(0,0,0,0.4); /* Ajoute un fond sombre pour souligner que la fenêtre modale est active */
+          }
+
+          .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto; /* Place le contenu de la fenêtre modale au centre de l'écran */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%; /* La largeur du contenu de la fenêtre modale */
+            border-radius: 15px;
+          }
+
+          .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .close_collective {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+
+          .close_collective:hover,
+          .close_collective:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .recap{
+            margin-top: 87px;
+          }
+
+    }
+}
+.addition_individuel{
+    display: none;
+    margin-top: 10px;
+    .numero_table{
+        margin-bottom: 20px;
+        .contenue_individuel{
+            background-color: #000;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #fff;
+                text-align: center;
+                color: #fff;
+                font-size: 32px; /* Augmentation de la taille de police */
+                margin: 0; /* Suppression de la marge */
+            }
+        }
+    }
+    .btn_addition_goup{
+        margin-bottom: 20px;
+        .contenue{
+            background-color: #E61D1D;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #fff;
+                font-size: 24px; /* Augmentation de la taille de police */
+                margin: 2; /* Suppression de la marge */
+            }
+        }
+    }
+    .nombre_personne{
+        margin-bottom: 20px;
+        .contenue{
+            background-color: #E6CB1D;
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px; /* Ajout de coins arrondis */
+            h1{
+                text-align: center;
+                color: #000;
+                font-size: 24px; /* Augmentation de la taille de police */
+                margin: 0; /* Suppression de la marge */
+            }
+        }
+    }
+    .detail{
+        .personne_nom{
+            margin-top: 50px;
+            margin-bottom: 20px;
+            .contenue{
+                background-color: #E6CB1D;
+                margin-left: 30%;
+                margin-right: 30%;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border-radius: 5px; /* Ajout de coins arrondis */
+                h1{
+                    text-align: center;
+                    color: #000;
+                    font-size: 24px; /* Augmentation de la taille de police */
+                }
+            }
+        }
+        .contenue_facture{
+            /* Style des éléments du formulaire */
+                .form_group {
+                    margin-bottom: 20px;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    width: 100%;
+                }
+
+                button[type="submit"] {
+                    padding: 10px;
+                    background-color: #E61D1D;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                /* Style du formulaire dans le modal */
+                .modal-content form {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                .modal-content h2 {
+                    text-align: center;
+                }
+
+                /* Style pour rendre le formulaire plus compact sur mobile */
+                @media screen and (max-width: 600px) {
+                    .modal-content form {
+                    width: 100%;
+                    }
+
+                    input {
+                    width: calc(100% - 20px);
+                    }
+                }
+
+            table {
+                border-collapse: collapse;
+                width: 90%;
+                margin: 20px auto;
+
+                .header_t{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    background-color: #000;
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .header_tM{
+                    background-color: #E6CB1D;
+                    color: #000;
+                }
+              }
+
+              th,
+              td {
+                padding: 10px;
+                text-align: center;
+              }
+
+              th {
+                color: #fff;
+                font-weight: bold;
+                font-size: 26px;
+              }
+
+              td:nth-child(1) {
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+                text-align: left;
+              }
+
+
+              th:nth-child(n+2):not(:last-child) {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+              }
+              td:nth-child(n+2):not(:last-child) {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+              }
+
+              td:last-child  {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+              }
+              th:last-child {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+              }
+              .recap{
+                margin-top: 87px;
+                tbody{
+                    .highlight_total {
+                        font-weight: bold;
+                        background-color: #E61D1D;
+                        font-size: 30px;
+                        color: #fff;
+                        margin-left: 20%;
+                        margin-right: 20%;
+                        text-align: center;
+                      }
+                  }
+              }
+
+
+              tfoot{
+                .highlight {
+                    font-weight: bold;
+                    background-color: #E61D1D;
+                    font-size: 30px;
+                    color: #fff;
+                    margin-right: 60%;
+                    text-align: center;
+                  }
+                  td{
+                    border-bottom: none;
+                  }
+              }
+
+              .total {
+                text-align: right;
+                font-size: 30px;
+                font-weight: bold;
+                color: #000;
+              }
+
+              .total td,
+              .total th {
+                border-top: 2px solid #000;
+              }
+
+              .total td:last-child {
+                color: #E61D1D;
+              }
+
+              .total td:nth-child(n+2):not(:last-child),
+              .total th:nth-child(n+2):not(:last-child) {
+                  margin-top: 10px;
+                color: #E61D1D;
+              }
+              .mode_selection{
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 81px;
+                margin-bottom: 20px;
+                .custom-select {
+                    position: relative;
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: #212529;
+                    vertical-align: middle;
+                    width: 100%;
+                    max-width: 280px;
+                  }
+
+                  .custom-select select {
+                    position: relative;
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: #fff;
+                    background-color: #E61D1D;
+                    border: 1px solid #ced4da;
+                    border-radius: 5px;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    cursor: pointer;
+                  }
+
+                  .custom-select select:focus {
+                    outline: none;
+                    border-color: #E61D1D;
+                    box-shadow: 0 0 0 0.2rem #E61D1D;
+                  }
+
+                  .custom-select::before,
+                  .custom-select::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    margin-top: -3px;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid #fff;
+                  }
+
+                  .custom-select::after {
+                    margin-top: -9px;
+                    border-top: 6px solid #fff;
+                  }
+
+                  .custom-select.open::before {
+                    margin-top: -9px;
+                    border-top: 6px solid #6c757d;
+                  }
+
+                  .custom-select.open::after {
+                    margin-top: -3px;
+                    border-top: 6px solid #495057;
+                    transform: rotate(180deg);
+                  }
+              }
+
+
+              .modal {
+                display: none; /* Par défaut, le modal est masqué */
+                position: fixed; /* La fenêtre modale reste en place même lorsque l'utilisateur fait défiler la page */
+                z-index: 1; /* Place la fenêtre modale au-dessus de tout le reste */
+                left: 0;
+                top: 0;
+                width: 100%; /* La largeur de la fenêtre modale doit remplir toute la largeur de l'écran */
+                height: 100%; /* La hauteur de la fenêtre modale doit remplir toute la hauteur de l'écran */
+                overflow: auto; /* Permet aux utilisateurs de faire défiler la fenêtre modale si son contenu dépasse la hauteur de l'écran */
+                background-color: rgba(0,0,0,0.4); /* Ajoute un fond sombre pour souligner que la fenêtre modale est active */
+              }
+
+              .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto; /* Place le contenu de la fenêtre modale au centre de l'écran */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 60%; /* La largeur du contenu de la fenêtre modale */
+                border-radius: 15px;
+              }
+
+              .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+              }
+
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              .close_collective {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+              }
+
+              .close_collective:hover,
+              .close_collective:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              .recap{
+                margin-top: 87px;
+              }
+        }
+    }
+
+}
+
