@@ -1,5 +1,15 @@
 @extends('user.partials.main')
 <link rel="stylesheet" href="{{ asset('css/accueil_user.css') }}">
+<style>
+    .top {
+        background-image: url("{{ asset('/images/accueil_clients.jpg')}}");
+        background-size: cover;
+        height: 560px;
+        width: 100%;
+        overflow: hidden;
+        /* cache le contenu qui dépasse le conteneur */
+    }
+</style>
 @section('logo')
     <div class="retour">
         <i class="fa-solid fa-circle-left"style="font-size: 50px; color: #fff;"></i>

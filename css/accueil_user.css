@@ -14,13 +14,7 @@ main {
   margin: 0;
 }
 
-.top {
-  background-image: url("/images/accueil_clients.jpg");
-  background-size: cover;
-  height: 867px;
-  width: 100%;
-  overflow: hidden; /* cache le contenu qui dépasse le conteneur */
-}
+
 
 .header {
   margin: 20px;

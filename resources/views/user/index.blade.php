@@ -2,7 +2,7 @@
 
 <style>
     .top {
-        background-image: url("/images/bg.jpg");
+        background-image: url("{{asset('/images/bg.jpg')}}");
         background-size: cover;
         width: 100%;
         overflow: hidden;

@@ -1,12 +1,22 @@
 @extends('user.partials.main')
 <link rel="stylesheet" href="{{ asset('css/cuisine.css') }}">
+<style>
+    .top {
+        background-image: url("{{ asset('/images/cuisinier.jpg') }}");
+        background-size: cover;
+        background-position: center center;
+        height: 563px;
+        width: 100%;
+        overflow: hidden;
+        /* cache le contenu qui dépasse le conteneur */
+    }
+</style>
 @section('logo')
     <div class="retour">
         <i class="fa-solid fa-circle-left"style="font-size: 50px; color: #fff;"></i>
     </div>
 @endsection
 @section('content2')
-
     <div class="numero_table_group">
         <div class="numero_table">
             <a href="#" id="command_1"><button class="impair">Table 1</button></a>

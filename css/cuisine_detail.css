@@ -14,14 +14,6 @@ main {
   margin-bottom: 30px;
 }
 
-.top {
-  background-image: url("/images/cuisinier.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: 563px;
-  width: 100%;
-  overflow: hidden; /* cache le contenu qui dépasse le conteneur */
-}
 
 .header {
   padding: 20px;
